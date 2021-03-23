@@ -11,9 +11,10 @@ set hidden
 set cursorline
 set splitright
 set splitbelow
-
 set nobackup
 set noswapfile
+" Allow for mouse support, such as scrolling / clicking on tabs
+set mouse=a
 
 syntax on
 let &colorcolumn=81
