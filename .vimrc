@@ -7,7 +7,7 @@ set smartindent
 set nu
 set hlsearch
 set incsearch
-
+set hidden
 set cursorline
 set splitright
 set splitbelow
