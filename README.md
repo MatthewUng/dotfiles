@@ -18,6 +18,10 @@ https://medium.com/breathe-publication/understanding-vims-jump-list-7e1bfc72cdf0
 ## ctags
 https://andrew.stwrt.ca/posts/vim-ctags/
 
+## plugin reading
+https://github.com/ycm-core/YouCompleteMe#commands  
+https://github.com/preservim/tagbar  
+
 ## workflow
 https://wincent.com/wiki/Vim_screencasts
 
