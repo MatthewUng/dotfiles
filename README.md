@@ -15,6 +15,9 @@ https://thevaluable.dev/vim-intermediate/
 ## jump / change lists
 https://medium.com/breathe-publication/understanding-vims-jump-list-7e1bfc72cdf0
 
+## ctags
+https://andrew.stwrt.ca/posts/vim-ctags/
+
 ## workflow
 https://wincent.com/wiki/Vim_screencasts
 
