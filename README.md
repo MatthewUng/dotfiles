@@ -1,8 +1,6 @@
-# My vimrc file
+# Dot Files
 
-
-## Further Reading
-
+## Vim Reading
 ### general
 https://nvie.com/posts/how-i-boosted-my-vim/  
 https://thevaluable.dev/vim-advanced/  
