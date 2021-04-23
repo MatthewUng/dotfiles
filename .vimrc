@@ -1,7 +1,7 @@
-
 " bug with using vim on WSL causes vim to be opened in replace mode
 set t_u7=
 let g:mapleader="\<Space>"
+let g:maplocalleader="\<Space>"
 
 call plug#begin()
 
