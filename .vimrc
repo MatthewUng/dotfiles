@@ -10,24 +10,44 @@ Plug 'dbakker/vim-projectroot'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+
+" UI
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rafi/awesome-vim-colorschemes'
+
+" Editor
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
 
-" colorschemes
-Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-nnoremap <silent> <Leader>f :NERDTreeToggle<Enter>
-nnoremap <silent> <Leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
+nnoremap <silent> <leader>f :NERDTreeToggle<Enter>
+nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
 
-nnoremap <silent> <Leader>yy :YcmCompleter GoTo<CR>
-nnoremap <silent> <Leader>yr :YcmCompleter GoToReferences<CR>
+" let g:rooter_patterns = ['.git', 'Makefile']
+let g:rooter_patterns = ['>~']
+
+nnoremap <silent> <leader>yy :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>yr :YcmCompleter GoToReferences<CR>
 nnoremap <Leader>yd :YcmDiags<CR>
 nnoremap <Leader>yf :YcmCompleter FixIt<CR>
 nnoremap <Leader>y: :YcmCompleter<Space>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+let g:airline#extensions#tabline#enabled = 1
+
+" enable if hardcore
+inoremap <esc> <nop>
+inoremap ,. <esc>
+" update vimrc on-the-fly B)
+nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap H :bp <CR>
+nnoremap L :bn <CR>
 
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function WrapOn()
