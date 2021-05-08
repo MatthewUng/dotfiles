@@ -6,6 +6,9 @@ https://nvie.com/posts/how-i-boosted-my-vim/
 https://thevaluable.dev/vim-advanced/  
 https://www.ele.uri.edu/faculty/vetter/Other-stuff/vi/009-index.html
 
+## navigating in insert mode
+https://dev.to/iggredible/the-only-vim-insert-mode-cheatsheet-you-ever-needed-nk9
+
 ## buffers
 https://stackoverflow.com/questions/26708822/why-do-vim-experts-prefer-buffers-over-tabs/26745051#26745051  
 https://thevaluable.dev/vim-intermediate/
