@@ -41,9 +41,10 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:airline#extensions#tabline#enabled = 1
 
 " enable if hardcore
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 inoremap ,. <esc>
-" update vimrc on-the-fly B)
+noreemap ,. <esc>
+" update vimrc on-the-fly 
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap H :bp <CR>
@@ -86,7 +87,7 @@ function ToggleWrap()
 endfunction
 call WrapOn()
 
-" <Leader>r -- Cycle through relativenumber + number, number (only), and no
+" <Leader>' -- Cycle through relativenumber + number, number (only), and no
 " numbering (mnemonic: relative).
 nnoremap <silent> <Leader>' :call Cycle_numbering()<CR>
 " Cycle through relativenumber + number, number (only), and no numbering.
@@ -123,7 +124,9 @@ set foldmethod=syntax
 " Open all folds upon buffer read
 au BufRead * normal zR
 " Allow for mouse support, such as scrolling / clicking on tabs
-set mouse=a
+" using 'n' insted of 'a' bc of copy/paste issue 
+set mouse=n
+" set mouse=a
 
 syntax on
 let &colorcolumn=81
