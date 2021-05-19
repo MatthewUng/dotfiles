@@ -43,7 +43,7 @@ let g:airline#extensions#tabline#enabled = 1
 " enable if hardcore
 " inoremap <esc> <nop>
 inoremap ,. <esc>
-noreemap ,. <esc>
+noremap ,. <esc>
 " update vimrc on-the-fly 
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
