@@ -25,8 +25,11 @@ call plug#end()
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-nnoremap <silent> <leader>f :NERDTreeToggle<Enter>
+nnoremap <silent> <leader><space> :NERDTreeToggle<Enter>
 nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
+nnoremap <silent> <Leader>f :Files<Enter>
+nnoremap <silent> <Leader>b :Buffers<Enter>
+
 
 " let g:rooter_patterns = ['.git', 'Makefile']
 let g:rooter_patterns = ['>~']
@@ -53,28 +56,28 @@ nnoremap L :bn <CR>
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function WrapOn()
   setlocal wrap linebreak
-  " set virtualedit=
-  " setlocal display+=lastline
-  " noremap  <buffer> <silent> <Up>   g<Up>
-  " noremap  <buffer> <silent> <Down> g<Down>
-  " noremap  <buffer> <silent> <Home> g<Home>
-  " noremap  <buffer> <silent> <End>  g<End>
-  " inoremap <buffer> <silent> <Up>   <C-o>gk
-  " inoremap <buffer> <silent> <Down> <C-o>gj
-  " inoremap <buffer> <silent> <Home> <C-o>g<Home>
-  " inoremap <buffer> <silent> <End>  <C-o>g<End>
+  set virtualedit=
+  setlocal display+=lastline
+  noremap  <buffer> <silent> <Up>   g<Up>
+  noremap  <buffer> <silent> <Down> g<Down>
+  noremap  <buffer> <silent> <Home> g<Home>
+  noremap  <buffer> <silent> <End>  g<End>
+  inoremap <buffer> <silent> <Up>   <C-o>gk
+  inoremap <buffer> <silent> <Down> <C-o>gj
+  inoremap <buffer> <silent> <Home> <C-o>g<Home>
+  inoremap <buffer> <silent> <End>  <C-o>g<End>
 endfunction
 function WrapOff()
   setlocal nowrap
-  " set virtualedit=
-  " silent! nunmap <buffer> <Up>
-  " silent! nunmap <buffer> <Down>
-  " silent! nunmap <buffer> <Home>
-  " silent! nunmap <buffer> <End>
-  " silent! iunmap <buffer> <Up>
-  " silent! iunmap <buffer> <Down>
-  " silent! iunmap <buffer> <Home>
-  " silent! iunmap <buffer> <End>
+  set virtualedit=
+  silent! nunmap <buffer> <Up>
+  silent! nunmap <buffer> <Down>
+  silent! nunmap <buffer> <Home>
+  silent! nunmap <buffer> <End>
+  silent! iunmap <buffer> <Up>
+  silent! iunmap <buffer> <Down>
+  silent! iunmap <buffer> <Home>
+  silent! iunmap <buffer> <End>
 endfunction
 function ToggleWrap()
   if &wrap
