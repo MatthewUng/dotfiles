@@ -124,6 +124,7 @@ set splitbelow
 set nobackup
 set noswapfile
 set foldmethod=syntax
+set scrolloff=8
 " Open all folds upon buffer read
 au BufRead * normal zR
 " Allow for mouse support, such as scrolling / clicking on tabs
