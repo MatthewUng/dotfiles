@@ -50,17 +50,17 @@ noremap ,. <esc>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 " next/prev tab
-nnoremap H :bp <CR>
-nnoremap L :bn <CR>
-" Yank to end of line
+nnoremap H gt
+nnoremap L gT
+" yank to end of line
 nnoremap Y y$
 " keep cursor centered for n, N, J
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ'z
 " undo up to period or comma
-inoremap . <c-g>u
-inoremap , <c-g>u
+inoremap . .<c-g>u
+inoremap , ,<c-g>u
 " add relative jupms to jump list
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
