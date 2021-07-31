@@ -43,15 +43,27 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 let g:airline#extensions#tabline#enabled = 1
 
-" enable if hardcore
-" inoremap <esc> <nop>
+" remap <esc> key
 inoremap ,. <esc>
 noremap ,. <esc>
 " update vimrc on-the-fly 
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
+" next/prev tab
 nnoremap H :bp <CR>
 nnoremap L :bn <CR>
+" Yank to end of line
+nnoremap Y y$
+" keep cursor centered for n, N, J
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ'z
+" undo up to period or comma
+inoremap . <c-g>u
+inoremap , <c-g>u
+" add relative jupms to jump list
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function WrapOn()
