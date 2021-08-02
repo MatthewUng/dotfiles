@@ -125,7 +125,7 @@ set expandtab
 set autoindent
 set backspace=2
 set smartindent
-set hlsearch
+set nohlsearch
 set incsearch
 set hidden
 set number
