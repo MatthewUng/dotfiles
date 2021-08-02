@@ -57,7 +57,7 @@ nnoremap Y y$
 " keep cursor centered for n, N, J
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap J mzJ'z
+nnoremap J mzJ`z
 " undo up to period or comma
 inoremap . .<c-g>u
 inoremap , ,<c-g>u
