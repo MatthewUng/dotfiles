@@ -47,6 +47,9 @@ let g:airline#extensions#tabline#enabled = 1
 " remap <esc> key
 inoremap ,. <esc>
 noremap ,. <esc>
+" remap ;
+nnoremap ; :
+vnoremap ; :
 " update vimrc on-the-fly 
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
