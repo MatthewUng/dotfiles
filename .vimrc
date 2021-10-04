@@ -69,6 +69,14 @@ inoremap , ,<c-g>u
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
+" quick-fix and local list
+nnoremap <c-q> :copen<cr>
+nnoremap <c-j> :cnext<cr>
+nnoremap <c-k> :cprev<cr>
+nnoremap <leader>q :lopen<cr>
+nnoremap <leader>j :lnext<cr>
+nnoremap <leader>k :lprev<cr>
+
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function WrapOn()
   setlocal wrap linebreak
