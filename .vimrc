@@ -76,6 +76,8 @@ nnoremap <c-k> :cprev<cr>
 nnoremap <leader>q :lopen<cr>
 nnoremap <leader>j :lnext<cr>
 nnoremap <leader>k :lprev<cr>
+" close current tab
+nnoremap <leader>x :tabclose<cr>
 
 noremap <silent> <Leader>w :call ToggleWrap()<CR>
 function WrapOn()
