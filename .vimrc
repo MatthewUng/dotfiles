@@ -54,8 +54,8 @@ vnoremap ; :
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 " next/prev tab
-nnoremap H gt
-nnoremap L gT
+nnoremap H gT
+nnoremap L gt
 " yank to end of line
 nnoremap Y y$
 " keep cursor centered for n, N, J
