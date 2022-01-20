@@ -68,6 +68,9 @@ inoremap , ,<c-g>u
 " add relative jupms to jump list
 nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+" add resizing of horizontal splits
+nnoremap _ :res -3<cr>
+nnoremap + :res +3<cr>
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
