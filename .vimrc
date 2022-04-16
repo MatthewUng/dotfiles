@@ -71,6 +71,17 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 " add resizing of horizontal splits
 nnoremap _ :res -3<cr>
 nnoremap + :res +3<cr>
+" auto bracket completion
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+" auto paren completion
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O
+inoremap ((     (
+inoremap ()     ()
+
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
