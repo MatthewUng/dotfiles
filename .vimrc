@@ -81,6 +81,7 @@ inoremap (      ()<Left>
 inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
 inoremap ()     ()
+inoremap AA <esc>A
 
 
 " quick-fix and local list
