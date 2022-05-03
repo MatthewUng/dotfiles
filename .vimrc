@@ -71,6 +71,12 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 " add resizing of horizontal splits
 nnoremap _ :res -3<cr>
 nnoremap + :res +3<cr>
+" swap `l` and `t` in normal mode
+" move commonly used keys away from pinky finger :')
+nnoremap t l
+nnoremap l t
+" make switching panes consistent with `t` <-> `l` swap
+nnoremap <c-w>t <c-w>l
 " auto bracket completion
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -93,8 +99,11 @@ nnoremap <leader>j :lnext<cr>
 nnoremap <leader>k :lprev<cr>
 " close current tab
 nnoremap <leader>x :tabclose<cr>
+" save file
+" also to avoid using pinky finger :')
+nnoremap <leader>w :w<cr>
 
-noremap <silent> <Leader>w :call ToggleWrap()<CR>
+noremap <silent> <Leader>, :call ToggleWrap()<CR>
 function WrapOn()
   setlocal wrap linebreak
   set virtualedit=
