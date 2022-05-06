@@ -55,7 +55,7 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 " next/prev tab
 nnoremap H gT
-nnoremap L gt
+nnoremap T gt
 " yank to end of line
 nnoremap Y y$
 " keep cursor centered for n, N, J
@@ -75,6 +75,9 @@ nnoremap + :res +3<cr>
 " move commonly used keys away from pinky finger :')
 nnoremap t l
 nnoremap l t
+nnoremap L T
+vnoremap T L
+vnoremap L T
 " make switching panes consistent with `t` <-> `l` swap
 nnoremap <c-w>t <c-w>l
 " auto bracket completion
