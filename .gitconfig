@@ -1,0 +1,9 @@
+[alias]
+    append = !git add -A && git commit --amend --no-edit
+    amend = commit --amend --no-edit
+    b = branch
+    s = status
+    d = diff
+    co = checkout
+    cp = cherry-pick
+    send = push -f
