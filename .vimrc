@@ -19,11 +19,20 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 " Editor
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
+" Commenter
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" disable creating default mappings
+let g:NERDCreateDefaultMappings = 0
+map <silent> <leader>c <plug>NERDCommenterToggle
+" Align line-wise comment delimiters at beginning of line
+" Other options include: 'left', 'right', 'start', 'none'
+let g:NERDDefaultAlign = 'start'
 
 nnoremap <silent> <leader><space> :NERDTreeToggle<Enter>
 nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
