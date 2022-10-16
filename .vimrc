@@ -91,7 +91,8 @@ inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
 inoremap ()     ()
 inoremap AA <esc>A
-
+inoremap ;; ::
+inoremap s;; std::
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
