@@ -33,6 +33,8 @@ map <silent> <leader>c <plug>NERDCommenterToggle
 " Align line-wise comment delimiters at beginning of line
 " Other options include: 'left', 'right', 'start', 'none'
 let g:NERDDefaultAlign = 'start'
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 
 nnoremap <silent> <leader><space> :NERDTreeToggle<Enter>
 nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
