@@ -196,6 +196,25 @@ au BufRead * normal zR
 set mouse=n
 " set mouse=a
 
+augroup cppgroup
+    autocmd!
+    autocmd filetype cpp inoremap cont continue;
+    autocmd filetype cpp set foldmethod=syntax
+augroup END
+
+augroup py_group
+    autocmd!
+    autocmd filetype python inoremap cont continue
+    autocmd filetype python set foldmethod=indent
+augroup END
+
+augroup haskell_group
+    autocmd!
+    autocmd filetype haskell set foldmethod=indent
+    autocmd filetype haskell set tabstop=2
+    autocmd filetype haskell set shiftwidth=2
+augroup END
+
 syntax on
 let &colorcolumn=81
 colorscheme PaperColor
