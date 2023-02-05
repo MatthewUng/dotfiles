@@ -196,15 +196,25 @@ au BufRead * normal zR
 set mouse=n
 " set mouse=a
 
-augroup cppgroup
+syntax on
+let &colorcolumn=81
+colorscheme PaperColor
+set background=dark
+
+augroup cpp_group
     autocmd!
-    autocmd filetype cpp inoremap cont continue;
+    autocmd filetype cpp inoremap <buffer> class <esc>Iclass <esc>A{};<esc>hi<cr><cr><esc>kI
+    autocmd filetype cpp inoremap <buffer> struct <esc>Istruct <esc>A{};<esc>hi<cr><cr><esc>kI
+    autocmd filetype cpp inoremap <buffer> cont continue;
+    autocmd filetype cpp inoremap <buffer> if if()<esc>i
+    autocmd filetype cpp inoremap <buffer> ;; ::
+    autocmd filetype cpp inoremap <buffer> s;; std::
     autocmd filetype cpp set foldmethod=syntax
 augroup END
 
 augroup py_group
     autocmd!
-    autocmd filetype python inoremap cont continue
+    autocmd filetype python inoremap <buffer> cont continue
     autocmd filetype python set foldmethod=indent
 augroup END
 
@@ -215,7 +225,3 @@ augroup haskell_group
     autocmd filetype haskell set shiftwidth=2
 augroup END
 
-syntax on
-let &colorcolumn=81
-colorscheme PaperColor
-set background=dark
