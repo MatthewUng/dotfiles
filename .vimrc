@@ -205,6 +205,8 @@ augroup cpp_group
     autocmd filetype cpp inoremap <buffer> struct <esc>Istruct <esc>A{};<esc>hi<cr><cr><esc>kI
     autocmd filetype cpp inoremap <buffer> cont continue;
     autocmd filetype cpp inoremap <buffer> if if()<esc>i
+    autocmd filetype cpp inoremap <buffer> for for()<esc>i
+    autocmd filetype cpp inoremap <buffer> while while()<esc>i
     autocmd filetype cpp inoremap <buffer> ;; ::
     autocmd filetype cpp inoremap <buffer> s;; std::
     autocmd filetype cpp set foldmethod=syntax
