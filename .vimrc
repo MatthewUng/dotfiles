@@ -100,6 +100,10 @@ inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
 inoremap ()     ()
 inoremap AA <esc>A
+" allow undoing for <c-u> and <c-w>
+inoremap <c-u> <c-g>u<c-u>
+inoremap <c-w> <c-g>u<c-w>
+
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
