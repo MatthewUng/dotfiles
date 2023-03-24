@@ -5,6 +5,7 @@
 https://nvie.com/posts/how-i-boosted-my-vim/  
 https://thevaluable.dev/vim-advanced/  
 https://www.ele.uri.edu/faculty/vetter/Other-stuff/vi/009-index.html
+https://thevaluable.dev/vim-advanced/
 
 ## navigating in insert mode
 https://dev.to/iggredible/the-only-vim-insert-mode-cheatsheet-you-ever-needed-nk9
