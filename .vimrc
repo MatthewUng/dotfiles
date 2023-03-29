@@ -21,6 +21,8 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
 " Commenter
 Plug 'preservim/nerdcommenter'
+" Git
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -35,6 +37,8 @@ map <silent> <leader>c <plug>NERDCommenterToggle
 let g:NERDDefaultAlign = 'start'
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
+
+map <silent> <leader>; :Git blame<CR>
 
 nnoremap <silent> <leader><space> :NERDTreeToggle<Enter>
 nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
