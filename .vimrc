@@ -43,6 +43,7 @@ map <silent> <leader>; :Git blame<CR>
 nnoremap <silent> <leader><space> :NERDTreeToggle<Enter>
 nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
 nnoremap <silent> <Leader>f :Files<Enter>
+" nnoremap <silent> <Leader>f :GitFiles<Enter>
 nnoremap <silent> <Leader>b :Buffers<Enter>
 nnoremap <silent> <leader>g :Rg<Enter>
 nnoremap <silent> <Leader>t :BLine<Enter>
@@ -157,7 +158,7 @@ function ToggleWrap()
     call WrapOn()
   endif
 endfunction
-call WrapOn()
+" call WrapOn()
 
 " <Leader>' -- Cycle through relativenumber + number, number (only), and no
 " numbering (mnemonic: relative).
