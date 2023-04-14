@@ -218,19 +218,24 @@ augroup cpp_group
     autocmd filetype cpp inoremap <buffer> while while()<esc>i
     autocmd filetype cpp inoremap <buffer> ;; ::
     autocmd filetype cpp inoremap <buffer> s;; std::
-    autocmd filetype cpp set foldmethod=syntax
+    autocmd filetype cpp setlocal foldmethod=syntax
 augroup END
 
 augroup py_group
     autocmd!
     autocmd filetype python inoremap <buffer> cont continue
-    autocmd filetype python set foldmethod=indent
+    autocmd filetype python setlocal foldmethod=indent
 augroup END
 
 augroup haskell_group
     autocmd!
-    autocmd filetype haskell set foldmethod=indent
-    autocmd filetype haskell set tabstop=2
-    autocmd filetype haskell set shiftwidth=2
+    autocmd filetype haskell setlocal foldmethod=indent
+    autocmd filetype haskell setlocal tabstop=2
+    autocmd filetype haskell setlocal shiftwidth=2
+augroup END
+
+augroup proto_group
+    autocmd!
+    autocmd filetype *.proto setlocal foldmethod=manual
 augroup END
 
