@@ -221,7 +221,7 @@ augroup cpp_group
     autocmd filetype cpp inoremap <buffer> while while()<esc>i
     autocmd filetype cpp inoremap <buffer> ;; ::
     autocmd filetype cpp inoremap <buffer> s;; std::
-    autocmd filetype cpp set foldmethod=syntax
+    autocmd filetype cpp setlocal foldmethod=syntax
 augroup END
 
 augroup py_group
