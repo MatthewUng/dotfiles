@@ -23,6 +23,8 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
 Plug 'preservim/nerdcommenter'
 " Git
 Plug 'tpope/vim-fugitive'
+" Spotify
+Plug 'MatthewUng/vim-beats'
 
 call plug#end()
 
@@ -210,15 +212,16 @@ set background=dark
 
 augroup cpp_group
     autocmd!
-    autocmd filetype cpp inoremap <buffer> class <esc>Iclass <esc>A{};<esc>hi<cr><cr><esc>kI
-    autocmd filetype cpp inoremap <buffer> struct <esc>Istruct <esc>A{};<esc>hi<cr><cr><esc>kI
-    autocmd filetype cpp inoremap <buffer> cont continue;
+    autocmd filetype cpp inoremap <buffer> class. <esc>Iclass <esc>A{};<esc>hi<cr><cr><esc>kI
+    autocmd filetype cpp inoremap <buffer> struct. <esc>Istruct <esc>A{};<esc>hi<cr><cr><esc>kI
+    autocmd filetype cpp inoremap <buffer> br; break;
+    autocmd filetype cpp inoremap <buffer> co; continue;
     autocmd filetype cpp inoremap <buffer> if if()<esc>i
     autocmd filetype cpp inoremap <buffer> for for()<esc>i
     autocmd filetype cpp inoremap <buffer> while while()<esc>i
     autocmd filetype cpp inoremap <buffer> ;; ::
     autocmd filetype cpp inoremap <buffer> s;; std::
-    autocmd filetype cpp setlocal foldmethod=syntax
+    autocmd filetype cpp set foldmethod=syntax
 augroup END
 
 augroup py_group
@@ -238,4 +241,13 @@ augroup proto_group
     autocmd!
     autocmd filetype *.proto setlocal foldmethod=manual
 augroup END
+
+nnoremap <silent> <leader>mm :call vimbeats#ToggleSpotify('012013d1f70ef84ba5a7bb25dfb8b7a5ea852064')<cr>
+nnoremap <leader>mj :call vimbeats#Next()<cr>
+nnoremap <leader>mk :call vimbeats#Prev()<cr>
+nnoremap <leader>m1 :call vimbeats#PlayContext("spotify:playlist:7DUzBdvt1lrM0IVKG93Ibh", "shibe economy")<cr>
+nnoremap <leader>m2 :call vimbeats#PlayContext("spotify:playlist:32ddKbn0mGzptiT9aV1ll5", "simp music")<cr>
+nnoremap <leader>m3 :call vimbeats#PlayContext("spotify:playlist:61HMevx1hNuVfv4EAVB2y6", "rnb")<cr>
+nnoremap <leader>m4 :call vimbeats#PlayContext("spotify:playlist:0Y4GZs5OuYuhwIC1vx5KCa", "eyes")<cr>
+nnoremap <leader>m5 :call vimbeats#PlayContext("spotify:playlist:3k0ZfvZzZnbHm6KId4Xvo1", "edm")<cr>
 
