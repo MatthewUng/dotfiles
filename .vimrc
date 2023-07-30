@@ -215,11 +215,10 @@ augroup cpp_group
     autocmd!
     autocmd filetype cpp inoremap <buffer> class. <esc>Iclass <esc>A{};<esc>hi<cr><cr><esc>kI
     autocmd filetype cpp inoremap <buffer> struct. <esc>Istruct <esc>A{};<esc>hi<cr><cr><esc>kI
-    autocmd filetype cpp inoremap <buffer> br; break;
-    autocmd filetype cpp inoremap <buffer> co; continue;
-    autocmd filetype cpp inoremap <buffer> if if()<esc>i
-    autocmd filetype cpp inoremap <buffer> for for()<esc>i
-    autocmd filetype cpp inoremap <buffer> while while()<esc>i
+    autocmd filetype cpp inoremap <buffer> b;; break;
+    autocmd filetype cpp inoremap <buffer> c;; continue;
+    autocmd filetype cpp inoremap <buffer> #ii #include<space>
+    autocmd filetype cpp inoremap <buffer> c.7 const<space>auto&<space>
     autocmd filetype cpp inoremap <buffer> ;; ::
     autocmd filetype cpp inoremap <buffer> s;; std::
     autocmd filetype cpp setlocal foldmethod=syntax
