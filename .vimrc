@@ -245,12 +245,15 @@ augroup END
 
 nnoremap <silent><leader>mm :call vimbeats#ToggleSpotify('012013d1f70ef84ba5a7bb25dfb8b7a5ea852064')<cr>
 nnoremap <silent><leader>mu :echo vimbeats#CurrentlyPlaying()<cr>
+command! -nargs=+ SearchAndQueue :call vimbeats#SearchAndQueue(<q-args>)
+nnoremap <leader>mq :SearchAndQueue<space>
 nnoremap <silent><leader>mj :call vimbeats#Next()<cr>
 nnoremap <silent><leader>mk :call vimbeats#Prev()<cr>
-nnoremap <silent><leader>m1 :call vimbeats#PlayContext("spotify:playlist:7DUzBdvt1lrM0IVKG93Ibh", "shibe economy")<cr>
-nnoremap <silent><leader>m2 :call vimbeats#PlayContext("spotify:playlist:32ddKbn0mGzptiT9aV1ll5", "simp music")<cr>
-nnoremap <silent><leader>m3 :call vimbeats#PlayContext("spotify:playlist:61HMevx1hNuVfv4EAVB2y6", "rnb")<cr>
-nnoremap <silent><leader>m4 :call vimbeats#PlayContext("spotify:playlist:0Y4GZs5OuYuhwIC1vx5KCa", "eyes")<cr>
-nnoremap <silent><leader>m5 :call vimbeats#PlayContext("spotify:playlist:3k0ZfvZzZnbHm6KId4Xvo1", "edm")<cr>
+nnoremap <silent><leader>m1 :call vimbeats#PlayContext("spotify:playlist:7DUzBdvt1lrM0IVKG93Ibh")<cr> " shibe economy
+nnoremap <silent><leader>m2 :call vimbeats#PlayContext("spotify:playlist:32ddKbn0mGzptiT9aV1ll5")<cr> " simp init
+nnoremap <silent><leader>m3 :call vimbeats#PlayContext("spotify:playlist:61HMevx1hNuVfv4EAVB2y6")<cr> " rnb
+nnoremap <silent><leader>m4 :call vimbeats#PlayContext("spotify:playlist:0Y4GZs5OuYuhwIC1vx5KCa")<cr> " hiphop
+nnoremap <silent><leader>m5 :call vimbeats#PlayContext("spotify:playlist:3k0ZfvZzZnbHm6KId4Xvo1")<cr> " edm
+
 
 
