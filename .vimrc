@@ -110,12 +110,14 @@ inoremap AA <esc>A
 " allow undoing for <c-u> and <c-w>
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
+nnoremap <c-j> <c-d>
+nnoremap <c-k> <c-u>
 
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
-nnoremap <c-j> :cnext<cr>
-nnoremap <c-k> :cprev<cr>
+" nnoremap <c-j> :cnext<cr>
+" nnoremap <c-k> :cprev<cr>
 nnoremap <leader>q :lopen<cr>
 nnoremap <leader>j :lnext<cr>
 nnoremap <leader>k :lprev<cr>
