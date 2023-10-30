@@ -92,10 +92,17 @@ nnoremap + :res +3<cr>
 nnoremap t l
 nnoremap l t
 nnoremap L T
+" `nnoremap T` is saved for switching tabs
+" swap `l` and `t` in visual mode
+vnoremap t l
+vnoremap l t
 vnoremap T L
 vnoremap L T
 " make switching panes consistent with `t` <-> `l` swap
 nnoremap <c-w>t <c-w>l
+nnoremap <c-w>l <c-w>t
+nnoremap <c-w>T <c-w>L
+nnoremap <c-w>L <c-w>T
 " auto bracket completion
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
