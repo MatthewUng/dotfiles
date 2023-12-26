@@ -2,6 +2,7 @@
     append = !git add -A && git commit --amend --no-edit
     amend = commit --amend --no-edit
     b = branch
+    c = commit
     s = status
     d = diff
     co = checkout
