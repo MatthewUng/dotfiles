@@ -28,8 +28,13 @@ Plug 'MatthewUng/vim-beats'
 
 call plug#end()
 
+" NerdTree plugin
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" modify 'o', 's', 'i' operations to close nerd tree on use
+let g:NERDTreeQuitOnOpen = 1
+" modify <cr> command to close nerdtree upon opening a file
+let g:NERDTreeCustomOpenArgs = {'file': {'reuse': 'all', 'where': 'p', 'keepopen': 0}, 'dir': {}}
 
 " disable creating default mappings
 let g:NERDCreateDefaultMappings = 0
