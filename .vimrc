@@ -48,7 +48,9 @@ let g:NERDDefaultAlign = 'start'
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
-map <silent> <leader>; :Git blame<CR>
+" Git
+map <silent> <leader>gg :Git <CR>
+map <silent> <leader>gb :Git blame<CR>
 
 nnoremap <silent> <leader><space> :NERDTreeToggle<Enter>
 nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
