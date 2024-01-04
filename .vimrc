@@ -35,7 +35,10 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 let g:NERDTreeQuitOnOpen = 1
 " modify <cr> command to close nerdtree upon opening a file
 let g:NERDTreeCustomOpenArgs = {'file': {'reuse': 'all', 'where': 'p', 'keepopen': 0}, 'dir': {}}
+" Update help keymap from '?' to 'h' to allow usage of '?'
+let g:NERDTreeMapHelp = 'h'
 
+" NerdCommenter plugin
 " disable creating default mappings
 let g:NERDCreateDefaultMappings = 0
 map <silent> <leader>c <plug>NERDCommenterToggle
