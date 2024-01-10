@@ -130,6 +130,8 @@ inoremap <c-w> <c-g>u<c-w>
 " ergonomic navigation
 nnoremap <c-j> <c-d>
 nnoremap <c-k> <c-u>
+vnoremap <c-j> <c-d>
+vnoremap <c-k> <c-u>
 nnoremap <c-u> <c-y>
 
 " quick-fix and local list
