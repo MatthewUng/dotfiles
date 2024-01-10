@@ -127,9 +127,10 @@ inoremap AA <esc>A
 " allow undoing for <c-u> and <c-w>
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
+" ergonomic navigation
 nnoremap <c-j> <c-d>
 nnoremap <c-k> <c-u>
-
+nnoremap <c-u> <c-y>
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
