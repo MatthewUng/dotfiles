@@ -143,6 +143,7 @@ nnoremap <leader>j :lnext<cr>
 nnoremap <leader>k :lprev<cr>
 " close current tab
 nnoremap <leader>x :tabclose<cr>
+nnoremap <leader>q :q<cr>
 " save file
 " also to avoid using pinky finger :')
 nnoremap <leader>w :w<cr>
