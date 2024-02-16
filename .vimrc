@@ -124,6 +124,8 @@ inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
 inoremap ()     ()
 inoremap AA <esc>A
+" yank in clipboard register
+vnoremap C "+y
 " allow undoing for <c-u> and <c-w>
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
