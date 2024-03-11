@@ -129,7 +129,7 @@ vnoremap C "+y
 " easier register access (no need to click shift)
 vnoremap ,, "
 nnoremap ,, "
-# copy file name into register f
+" copy file name into register f
 nnoremap ,f :let @f=@%<cr>
 " allow undoing for <c-u> and <c-w>
 inoremap <c-u> <c-g>u<c-u>
