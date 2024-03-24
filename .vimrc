@@ -277,13 +277,14 @@ augroup END
 let g:SpotifyDeviceID='<device id here>'
 nnoremap <silent><leader>mm :call vimbeats#ToggleSpotify()<cr>
 nnoremap <silent><leader>mu :echo vimbeats#CurrentlyPlaying()<cr>
-command! -nargs=+ SearchAndQueue :call vimbeats#SearchAndQueue(<q-args>)
+command! -nargs=+ SearchAndQueue :call vimbeats#SearchAndQueueTrack(<q-args>)
 nnoremap <leader>mq :SearchAndQueue<space>
-nnoremap <silent><leader>mp :call vimbeats#SearchAndPlayPlaylist()<cr>
-nnoremap <silent><leader>mr :call vimbeats#SearchAndPlayFeaturedPlaylist()<cr>
+nnoremap <silent><leader>mp :call vimbeats#SelectAndPlayPlaylist()<cr>
+nnoremap <silent><leader>mr :call vimbeats#SelectAndPlayFeaturedPlaylist()<cr>
 nnoremap <silent><leader>mj :call vimbeats#Next()<cr>
 nnoremap <silent><leader>mk :call vimbeats#Prev()<cr>
 nnoremap <silent><leader>ml :call vimbeats#AddCurrentSongToLiked()<cr>
+
 
 
 
