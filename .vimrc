@@ -279,6 +279,8 @@ nnoremap <silent><leader>mm :call vimbeats#ToggleSpotify()<cr>
 nnoremap <silent><leader>mu :echo vimbeats#CurrentlyPlaying()<cr>
 command! -nargs=+ SearchAndQueue :call vimbeats#SearchAndQueueTrack(<q-args>)
 nnoremap <leader>mq :SearchAndQueue<space>
+command! -nargs=+ SearchAndPlayPlaylist :call vimbeats#SearchAndPlayPlaylist(<q-args>)
+nnoremap <leader>m; :SearchAndPlayPlaylist<space>
 nnoremap <silent><leader>mp :call vimbeats#SelectAndPlayPlaylist()<cr>
 nnoremap <silent><leader>mr :call vimbeats#SelectAndPlayFeaturedPlaylist()<cr>
 nnoremap <silent><leader>mj :call vimbeats#Next()<cr>
