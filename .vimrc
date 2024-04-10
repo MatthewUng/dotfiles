@@ -145,9 +145,9 @@ nnoremap <c-u> <c-y>
 nnoremap <c-q> :copen<cr>
 " nnoremap <c-j> :cnext<cr>
 " nnoremap <c-k> :cprev<cr>
-nnoremap <leader>q :lopen<cr>
-nnoremap <leader>j :lnext<cr>
-nnoremap <leader>k :lprev<cr>
+" nnoremap <leader>q :lopen<cr>
+" nnoremap <leader>j :lnext<cr>
+" nnoremap <leader>k :lprev<cr>
 " close current tab
 nnoremap <leader>x :tabclose<cr>
 nnoremap <leader>q :q<cr>
