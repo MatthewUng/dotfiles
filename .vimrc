@@ -284,6 +284,7 @@ nnoremap <silent><leader>mr :call vimbeats#SelectAndPlayFeaturedPlaylist()<cr>
 nnoremap <silent><leader>mj :call vimbeats#Next()<cr>
 nnoremap <silent><leader>mk :call vimbeats#Prev()<cr>
 nnoremap <silent><leader>ml :call vimbeats#AddCurrentSongToLiked()<cr>
+nnoremap <silent><leader>ms :call vimbeats#EnableShuffle()<cr>
 
 
 
