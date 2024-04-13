@@ -1,5 +1,3 @@
-" bug with using vim on WSL causes vim to be opened in replace mode
-set t_u7=
 let g:mapleader="\<Space>"
 let g:maplocalleader="\<Space>"
 
@@ -124,6 +122,7 @@ inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
 inoremap ()     ()
 inoremap AA <esc>A
+inoremap II <esc>I
 " yank in clipboard register
 vnoremap C "+y
 " easier register access (no need to click shift)
@@ -245,19 +244,26 @@ augroup cpp_group
     autocmd!
     autocmd filetype cpp inoremap <buffer> class. <esc>Iclass <esc>A{};<esc>hi<cr><cr><esc>kI
     autocmd filetype cpp inoremap <buffer> struct. <esc>Istruct <esc>A{};<esc>hi<cr><cr><esc>kI
-    autocmd filetype cpp inoremap <buffer> b;; break;
-    autocmd filetype cpp inoremap <buffer> c;; continue;
+    autocmd filetype cpp inoremap <buffer> ;r return
+    autocmd filetype cpp inoremap <buffer> ;b break;
+    autocmd filetype cpp inoremap <buffer> ;c continue;
+"     autocmd filetype cpp inoremap <buffer> if if()<esc>i
+"     autocmd filetype cpp inoremap <buffer> for for()<esc>i
+"     autocmd filetype cpp inoremap <buffer> while while()<esc>i
     autocmd filetype cpp inoremap <buffer> #ii #include<space>
     autocmd filetype cpp inoremap <buffer> c.7 const<space>auto&<space>
     autocmd filetype cpp inoremap <buffer> ;; ::
     autocmd filetype cpp inoremap <buffer> s;; std::
     autocmd filetype cpp setlocal foldmethod=syntax
+
 augroup END
 
 augroup py_group
     autocmd!
     autocmd filetype python inoremap <buffer> c; continue
     autocmd filetype python inoremap <buffer> r; return
+    autocmd filetype python inoremap <buffer> b; break
+    autocmd filetype python inoremap <buffer> e; enumerate(
     autocmd filetype python setlocal foldmethod=indent
 augroup END
 
