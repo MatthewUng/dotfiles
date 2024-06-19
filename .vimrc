@@ -260,10 +260,10 @@ augroup END
 
 augroup py_group
     autocmd!
-    autocmd filetype python inoremap <buffer> c; continue
-    autocmd filetype python inoremap <buffer> r; return
-    autocmd filetype python inoremap <buffer> b; break
-    autocmd filetype python inoremap <buffer> e; enumerate(
+    autocmd filetype python inoremap <buffer> ;c continue
+    autocmd filetype python inoremap <buffer> ;r return<space>
+    autocmd filetype python inoremap <buffer> ;b break
+    autocmd filetype python inoremap <buffer> ;e enumerate(
     autocmd filetype python setlocal foldmethod=indent
 augroup END
 
@@ -277,6 +277,23 @@ augroup END
 augroup proto_group
     autocmd!
     autocmd filetype *.proto setlocal foldmethod=manual
+augroup END
+
+augroup ts_group
+    autocmd!
+    autocmd filetype typescript setlocal foldmethod=syntax
+    autocmd filetype typescriptreact setlocal foldmethod=syntax
+augroup END
+
+
+augroup go_group
+    autocmd!
+    autocmd filetype go setlocal foldmethod=syntax
+    autocmd filetype go inoremap <buffer> ;c continue;
+    autocmd filetype go inoremap <buffer> ;r return<space>
+    autocmd filetype go inoremap <buffer> ;b break;
+    autocmd filetype go inoremap <buffer> ;n if err != nil {<cr><cr>}<esc>kS
+    autocmd filetype typescriptreact setlocal foldmethod=syntax
 augroup END
 
 " vim spotify integration :))
