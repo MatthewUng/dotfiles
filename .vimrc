@@ -47,8 +47,11 @@ let g:NERDDefaultAlign = 'start'
 let g:NERDSpaceDelims = 1
 
 " Git
-map <silent> <leader>gg :Git <CR>
 map <silent> <leader>gb :Git blame<CR>
+map <silent> <leader>gd :Git diff<CR>
+map <silent> <leader>gs :Git <CR>
+map <silent> <leader>gg :Git 
+map <silent> <leader>gl :Git log -50<cr>
 
 nnoremap <silent> <leader><space> :NERDTreeToggle<Enter>
 nnoremap <silent> <leader>n :silent! NERDTreeFind<CR>:NERDTreeFocus<CR>
@@ -284,7 +287,6 @@ augroup ts_group
     autocmd filetype typescript setlocal foldmethod=syntax
     autocmd filetype typescriptreact setlocal foldmethod=syntax
 augroup END
-
 
 augroup go_group
     autocmd!
