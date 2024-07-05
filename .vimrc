@@ -35,6 +35,10 @@ let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeCustomOpenArgs = {'file': {'reuse': 'all', 'where': 'p', 'keepopen': 0}, 'dir': {}}
 " Update help keymap from '?' to 'h' to allow usage of '?'
 let g:NERDTreeMapHelp = 'h'
+" Update next/prev sibling command away from <c-j> and <c-k>
+let g:NERDTreeMapJumpNextSibling = 'H'
+let g:NERDTreeMapJumpPrevSibling = 'L'
+
 
 " NerdCommenter plugin
 " disable creating default mappings
