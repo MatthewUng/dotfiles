@@ -17,10 +17,14 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 " Editor
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clangd-completer' }
+Plug 'github/copilot.vim'
+
 " Commenter
 Plug 'preservim/nerdcommenter'
 " Git
 Plug 'tpope/vim-fugitive'
+" yaml folds
+Plug 'pedrohdz/vim-yaml-folds'
 " Spotify
 Plug 'MatthewUng/vim-beats'
 
