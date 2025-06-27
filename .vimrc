@@ -275,6 +275,7 @@ augroup py_group
     autocmd filetype python inoremap <buffer> ;r return<space>
     autocmd filetype python inoremap <buffer> ;b break
     autocmd filetype python inoremap <buffer> ;e enumerate(
+    autocmd filetype python inoremap <buffer> ;9 (<esc>ea)
     autocmd filetype python setlocal foldmethod=indent
 augroup END
 
