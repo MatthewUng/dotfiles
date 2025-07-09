@@ -157,6 +157,7 @@ tnoremap ,. <C-\><C-n>
 autocmd TermOpen * startinsert
 nnoremap <leader>z :vsplit \| terminal<cr>
 nnoremap <leader>dd :bd!
+autocmd TermOpen * setlocal nonumber norelativenumber
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
