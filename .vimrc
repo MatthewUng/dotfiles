@@ -78,6 +78,7 @@ nnoremap <silent> <leader>yr :YcmCompleter GoToReferences<CR>
 nnoremap <Leader>yd :YcmDiags<CR>
 nnoremap <Leader>yf :YcmCompleter FixIt<CR>
 nnoremap <Leader>y: :YcmCompleter<Space>
+let g:ycm_key_detailed_diagnostics = ''
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 let g:airline#extensions#tabline#enabled = 1
@@ -150,6 +151,12 @@ nnoremap <c-k> <c-u>
 vnoremap <c-j> <c-d>
 vnoremap <c-k> <c-u>
 nnoremap <c-u> <c-y>
+
+" terminal mode
+tnoremap ,. <C-\><C-n>
+autocmd TermOpen * startinsert
+nnoremap <leader>z :vsplit \| terminal<cr>
+nnoremap <leader>dd :bd!
 
 " quick-fix and local list
 nnoremap <c-q> :copen<cr>
