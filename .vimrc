@@ -315,6 +315,29 @@ augroup go_group
     autocmd filetype typescriptreact setlocal foldmethod=syntax
 augroup END
 
+augroup lua_group
+    autocmd filetype lua inoremap <buffer> ;r return<space>
+augroup END
+
+command! -nargs=+ AddTestCommand :lua require("ct-loop").set_command(<q-args>)
+noremap <leader>sa :AddTestCommand<space>
+noremap <leader>ss :lua require("ct-loop").run_command()<cr>
+
+" Define :Reload command inside Vimscript, but implemented in Lua
+" `Reload %` will reload the current lua file as a module.
+lua << EOF
+vim.api.nvim_create_user_command("Reload", function(opts)
+  local file = vim.fn.expand(opts.args)
+  local mod = file:gsub(vim.fn.stdpath("config") .. "/lua/", "")
+                   :gsub("%.lua$", "")
+                   :gsub("/", ".")
+  package.loaded[mod] = nil
+  require(mod)
+  vim.notify("Reloaded module: " .. mod)
+end, { nargs = 1, complete = "file" })
+EOF
+
+
 " vim spotify integration :))
 let g:SpotifyDeviceID='<device id here>'
 nnoremap <silent><leader>mm :call vimbeats#ToggleSpotify()<cr>
