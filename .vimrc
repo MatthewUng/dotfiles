@@ -323,6 +323,7 @@ augroup END
 
 command! -nargs=+ AddTestCommand :lua require("ct-loop").set_command(<q-args>)
 noremap <leader>sa :AddTestCommand<space>
+noremap <leader>so :lua require("ct-loop").open_companion()<cr>
 noremap <leader>ss :lua require("ct-loop").run_command()<cr>
 
 " Define :Reload command inside Vimscript, but implemented in Lua
