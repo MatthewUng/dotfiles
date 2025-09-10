@@ -87,8 +87,8 @@ let g:airline#extensions#tabline#enabled = 1
 inoremap ,. <esc>
 noremap ,. <esc>
 " update vimrc on-the-fly 
-nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>vs :source $MYVIMRC<CR>
+nnoremap <leader>ve :vsp $MYVIMRC<CR>
 " next/prev tab
 nnoremap H gT
 nnoremap T gt
