@@ -25,6 +25,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 " yaml folds
 Plug 'pedrohdz/vim-yaml-folds'
+" Quick cli exec
+Plug 'MatthewUng/ct-loop'
 " Spotify
 Plug 'MatthewUng/vim-beats'
 
