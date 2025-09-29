@@ -143,8 +143,8 @@ vnoremap C "+y
 vnoremap ,, "
 nnoremap ,, "
 " copy file name into register f
-nnoremap ,f :let @f=@%<cr>
-nnoremap ,ff :let @+=@%<cr>
+nnoremap <silent>,f :let @f=@%<cr>
+nnoremap <silent>,ff :let @+=@%<cr>
 " allow undoing for <c-u> and <c-w>
 inoremap <c-u> <c-g>u<c-u>
 inoremap <c-w> <c-g>u<c-w>
